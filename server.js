@@ -4,24 +4,14 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'https://youtube-react-ycql.onrender.com', // Specific origin allowed
+    origin: ['http://localhost:5175', 'https://youtube-react-ycql.onrender.com'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
   };
   
   app.use(cors(corsOptions));
 
-// const corsOptions = {
-//     origin: ['http://localhost:5173', 'http://localhost:5175'],  // Add both ports here
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type'],
-//   };
-  
-//   app.use(cors(corsOptions));
 
-// app.use(cors({
-//     origin: 'http://localhost:5173',
-//   }));
 
 // app.use(cors({
 //     origin: '*'
